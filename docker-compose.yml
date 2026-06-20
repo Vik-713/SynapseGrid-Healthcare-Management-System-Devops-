@@ -1,0 +1,37 @@
+services:
+
+  database:
+    image: postgres:17
+    container_name: synapsegrid-db
+
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: synapsegrid
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: ./app
+
+    container_name: synapsegrid-app
+
+    ports:
+      - "5001:5000"
+
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_NAME: synapsegrid
+      DB_USER: admin
+      DB_PASSWORD: admin123
+
+    depends_on:
+      - database
+
+volumes:
+  postgres_data:

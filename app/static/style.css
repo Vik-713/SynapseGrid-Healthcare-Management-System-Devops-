@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f0f5f4;
+    color: #1a2e2b;
+}
+
+/* ── HERO ── */
+.hero {
+    background: linear-gradient(135deg, #e8f5f3 0%, #d0ece8 100%);
+    color: #1a2e2b;
+    text-align: left;
+    padding: 50px 8%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #c3e0db;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1a2e2b;
+    letter-spacing: -0.5px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0aab8f;
+    margin-top: 4px;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-top: 16px;
+    font-size: 16px;
+    color: #4a6b65;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+/* ── ABOUT ── */
+.about {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2e2b;
+}
+
+.about p {
+    margin-top: 16px;
+    line-height: 1.8;
+    color: #4a6b65;
+    font-size: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 24px;
+    padding-left: 5%;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2e2b;
+    border-left: 4px solid #0aab8f;
+    line-height: 1;
+}
+
+/* ── CARDS GRID ── */
+.cards {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    padding: 24px 20px 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(10, 171, 143, 0.07);
+    text-align: left;
+    border: 1px solid #e2efed;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(10, 171, 143, 0.15);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a2e2b;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #6b8c87;
+    line-height: 1.5;
+}
+
+/* ── BUTTONS ── */
+button {
+    background: transparent;
+    color: #0aab8f;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+}
+
+button::after {
+    content: '→';
+    font-size: 16px;
+}
+
+button:hover {
+    background: transparent;
+    gap: 10px;
+}
+
+/* ── TECH STACK ── */
+.tech {
+    margin-top: 60px;
+    text-align: left;
+    padding: 0 5%;
+}
+
+.tech h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2e2b;
+    border-left: 4px solid #0aab8f;
+    padding-left: 12px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.badges {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a2e2b;
+    color: #e8f5f3;
+    padding: 10px 18px;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* ── FOOTER ── */
+footer {
+    margin-top: 70px;
+    background: #0d2b27;
+    color: #a8cec9;
+    text-align: center;
+    padding: 28px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer p:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 600;
+}
+
+footer p:last-child {
+    color: #6b9e98;
+    font-size: 13px;
+}

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: synapsegrid-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: synapsegrid
+
+  template:
+    metadata:
+      labels:
+        app: synapsegrid
+
+    spec:
+      containers:
+      - name: synapsegrid-app
+        image: synapsegrid-app:latest
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 5000
